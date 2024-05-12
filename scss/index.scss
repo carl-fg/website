@@ -1,0 +1,100 @@
+@import './global/variables.scss';
+@import './global/mixins.scss';
+
+// RESET
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    font-family: $mont;
+    box-sizing: border-box;
+}
+
+body{
+    background: $white;
+}
+
+button{
+    outline: none;
+}
+
+a{
+    color: $blueLink;
+    text-decoration: none;
+}
+
+// HERO SECTION
+.hero_section{
+    gap: 15vh;
+    height: 75vh;
+    @include flexcol;
+    padding: 0 14.5vw;
+    background: $primaryblue;
+
+    &__header{
+        display: flex;
+        padding-top: 1em;
+        justify-content: space-between;
+
+        &__logo{
+            color: $white;
+            font-weight: 800;
+            font-size: $basictitle;
+        }
+
+        &__links_section{
+            gap: 2em;
+            display: flex;
+            align-items: center;
+
+            &__link{
+                color: $white;
+                font-size: $slinks;
+                text-transform: uppercase;
+
+                &:last-child{
+                    padding: 10px 30px;
+                    border-radius: 50px;
+                    border: 2px solid $white;
+                }
+            }
+        }
+    }
+
+    &__content{
+        display: flex;
+
+        &__container{
+            gap: 3em;
+            width: 50%;
+            @include flexcol;
+
+            &__title{
+                color: $white;
+                font-size: $bigtitle;
+            }
+
+            &__description{
+                color: $white;
+            }
+
+            &__link_section{
+                
+                display: flex;
+
+                &__link{
+                    color: $white;
+                }
+
+                &__link:first-child{
+                    color: $teal;
+                }
+
+            }
+        }
+
+        &__img_container{
+            width: 50%;
+            @include flexmid;
+        }
+    }
+}

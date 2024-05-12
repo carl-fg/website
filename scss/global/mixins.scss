@@ -1,0 +1,13 @@
+// CENTER WITH FLEXBOX
+@mixin flexmid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// ALIGN IN COLUMN
+
+@mixin flexcol{
+    display: flex;
+    flex-direction: column;
+}
