@@ -169,7 +169,7 @@ a{
 .features_section{
     gap: 5em;
     display: flex;
-    padding: 0 10vw 12vh 10vw;
+    padding: 5vh 10vw 12vh 10vw;
 
     &__feature{
         gap: .5em;
@@ -205,5 +205,38 @@ a{
 
     &__img{
         width: 250px;
+    }
+}
+
+// ALTERNATING SECTION
+.alternating_section{
+    gap: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh 10vw;
+
+    &__block{
+        gap: 8em;
+        display: flex;
+
+        &__content{
+            gap: .5em;
+            width: 50%;
+            @include flexcol;
+
+            &__subtitle{
+                text-transform: uppercase;
+            }
+        }
+
+        &__img_container{
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .block_two_container{
+            justify-content: flex-end;
+        }
     }
 }
